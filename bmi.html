@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Boolean IF statements</title>
+  </head>
+  <body>
+    <script>
+    
+    /*
+    A program needs to calculate the Body Mass Index (BMI) for a person
+    using their height in inches and weight in pounds. The program
+    should prompt the user for weight and height
+    The BMI calculation for this is 
+    
+    bmi = (weight / (height * height)) * 703
+    
+    based on the accepted calculation.
+    
+    If the BMI is between 18.5 and 25, display that the person is
+    at a normal weight. If they are out of that range, tell them 
+    to consult their doctor.
+    
+    Nouns:
+       BMI, Height, Weight
+       
+    Verbs:
+       prompt for weight and height
+       calculate bmi
+       display message based on outcome       
+    
+    Defining Diagram:
+    Inputs:
+       height, weight
+       
+    Processes
+       prompt for weight and height
+       calculate BMI
+       display message based on outcome
+       
+    output
+       the message
+    
+    
+    Pseudocode:
+    CalculateBMI
+      initialize message
+      prompt for weight
+      prompt for height
+      calculate BMI as (weight / (height * height)) * 703
+      IF BMI is greater than or equal to 18.5 AND less than or equal to 25 THEN
+        set message to "You are a healthy weight for your height."
+      ELSE 
+        set message to "You should consult a doctor about your weight."
+      END
+
+      display message
+    END
+    
+    Test plans:
+
+    Variables: height, weight
+    
+    inputs: 72, 210
+    Expected results: You should consult a doctor about your weight.
+
+    inputs: 72, 150
+    Expected results: You are a healthy weight for your height."
+
+    inputs: 72, 100
+    Expected results: You should consult a doctor about your weight.
+
+    */
+    
+    // Variables
+    var bmi;
+    var height;
+    var message;
+    var weight;
+    
+    // Assignment from prompts
+    weight = prompt("What is your weight in pounds?");
+    height = prompt("What is your height in inches");
+    
+    // Conversion to numbers
+    weight = Number(weight);
+    height = Number(height);
+    
+    //Calculation
+    bmi =  (weight / (height * height)) * 703;
+   
+    if(bmi >= 18.5 && bmi <= 25){
+      message = "You are a healthy weight for your height.";
+    }else{
+      message = "You should consult a doctor about your weight.";
+    }
+    
+    // Display to screen
+    document.write(message);
+    
+    </script>
+    
+  </body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	 <meta charset="utf-8">
+	 <title>Paint Gallon Calculator</title>
+    <h1>Chelsey Fay</h1>
+    <p>
+    Programming Fundamentals Online<br>
+    November 20,2014
+    </p>
+	</head>
+	<body>
+	<pre> 
+  <script type="text/javascript">
+/* 
+Pseudocode:
+	GallonPaintCalculator
+	 prompt for ceilngLength
+	 prompt for ceilingWidth
+	 calculate totalGallons
+	 Display total gallonsNeeded
+	END
+
+	Test Plan 1
+var ceilingLength;
+var ceilingWidth;
+var squaredFeet = ceilingLength * ceilingWidth;
+var totalGallons = squaredFeet / 350;
+
+	Inputs 20, 12
+	
+	Expected Results: "You would need _ gallons to paint your ceiling"
+	
+	Actual Results: You would needNaNgallonsto paint your ceiling 
+  
+  
+  Test Plan 2
+var ceilingLength;
+var ceilingWidth;
+var squaredFeet;
+var totalGallons;
+
+squaredFeet = ceilingLength * ceilingWidth;
+totalGallons = squaredFeet / 350;
+  
+  Inputs 10, 15
+  
+  Expected Results: "You would need _ gallons to paint your ceiling"
+  
+  Actual Results: "You will need 0.43 gallons to paint your ceiling."
+  
+  
+*/
+
+//DECLARE AND SET VARIABLES//
+var ceilingLength;
+var ceilingWidth;
+var squaredFeet;
+var totalGallons;
+
+//INPUT//
+ceilingLength = prompt("Enter the length of your ceiling");
+ceilingWidth = prompt("Enter the width of your ceiling");
+  
+///NUMBER CONVERSION//
+ceilingLength = Number(ceilingLength);
+ceilingWidth = Number(ceilingWidth);
+
+//PROCESSING//
+squaredFeet = ceilingLength * ceilingWidth;
+totalGallons = squaredFeet / 350; 
+
+///ROUND NUMBER//
+totalGallons = Math.round(totalGallons * 100) / 100;
+
+	
+	alert("To paint your entire ceiling, you would need " + totalGallons + " gallons of paint.");
+  document.write("To paint your entire ceiling, you would need " + totalGallons + " gallons of paint.");
+
+
+ 	 </script>
+   </pre>
+	</body>
+</html>
