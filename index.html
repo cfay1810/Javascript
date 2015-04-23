@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Average Age</title>
+  </head>
+  <body>
+    <script>
+    // Declare variables
+    var age1;
+    var age2;
+    var age3;
+    var age4;
+    
+    var averageAge;
+    
+    var name1;
+    var name2;
+    var name3;
+    var name4;
+    
+    
+    // Get the input from the user
+    name1 = prompt("Enter the name of the first child.");
+    age1  = prompt("Enter the age of the first child.");
+    name2 = prompt("Enter the name of the second child.");
+    age2  = prompt("Enter the age of the second child.");
+    name3 = prompt("Enter the name of the third child.");
+    age3  = prompt("Enter the age of the third child.");
+    name4 = prompt("Enter the name of the fourth child.");
+    age4  = prompt("Enter the age of the fourth child.");
+
+    // convert ages to numbers
+    age1 = Number(age1);
+    age2 = Number(age2);
+    age3 = Number(age3);
+    age4 = Number(age4);
+    
+    // compute the average
+    averageAge = (age1 + age2 + age3 + age4) / 4;
+    
+    // Display the results
+                  // The first child is Bart who is 10
+    document.write("<p>The first child is " + name1 + " who is " + age1 + "</p>");
+    document.write("<p>The second child is " + name2 + " who is " + age2 + "</p>");
+    document.write("<p>The third child is " + name3 + " who is " + age3 + "</p>");
+    document.write("<p>The fourth child is " + name4 + " who is " + age4 + "</p>");
+    
+    document.write("<p>The average age is " + averageAge + "</p>");
+
+    
+    </script>
+  </body>
+
+</html>
